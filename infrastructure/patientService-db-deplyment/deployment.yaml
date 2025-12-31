@@ -28,7 +28,7 @@ spec:
     spec:
       serviceAccountName: patientservice-db
       volumes:
-      - name: patientService-db-volume
+      - name: patientservice-db-volume
         persistentVolumeClaim:
           claimName: patientService-db
       containers:
@@ -38,7 +38,7 @@ spec:
         - containerPort: 5432
         volumeMounts:
         - mountPath: "/var/lib/postgresql"
-          name: patientService-db-volume
+          name: patientservice-db-volume
         env: 
         - name: POSTGRES_PASSWORD
           value: "pass213"
