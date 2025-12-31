@@ -30,7 +30,7 @@ spec:
       volumes:
       - name: patientservice-db-volume
         persistentVolumeClaim:
-          claimName: patientService-db
+          claimName: patientservice-db
       containers:
       - name: patientservice-db-container
         image: postgres
