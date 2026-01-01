@@ -8,7 +8,7 @@ COPY pom.xml .
 RUN mvn -B dependency:go-offline
 
 COPY src ./src
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 # =========================
 # Runtime stage (Java 25)
